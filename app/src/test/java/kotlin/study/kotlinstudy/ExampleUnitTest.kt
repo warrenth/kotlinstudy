@@ -1,4 +1,4 @@
-package kotlin.study.kotlinstudy2018
+package com.study.kotlinstudy
 
 import org.junit.Test
 

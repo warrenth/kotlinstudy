@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="kotlin.study.kotlinstudy2018">
+    package="com.study.kotlinstudy">
 
     <application
         android:allowBackup="true"
@@ -16,6 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".basic.Step1Activity" android:label="Step1" />
+        <activity android:name=".basic.Step2Activity" android:label="Step2" />
+        <activity android:name=".basic.Step3Activity" android:label="Step3" />
+        <activity android:name=".basic.Step4Activity" android:label="Step4" />
+        <activity android:name=".basic.Step5Activity" android:label="Step5" />
+        <activity android:name=".basic.Step6Activity" android:label="Step6" />
     </application>
 
 </manifest>
