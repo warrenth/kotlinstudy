@@ -11,6 +11,6 @@ class Step6Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_step6);
+        setContentView(R.layout.activity_step6)
     }
 }
