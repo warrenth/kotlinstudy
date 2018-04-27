@@ -25,8 +25,8 @@ kick off 인사 및 계획 공유 / 첫 주차 발표 순서 선정 및 의견 �
 [1] 커니의 코틀린
 http://www.yes24.com/24/goods/56921334?scode=032&OzSrank=2
 
-[2] 코틀린 프로그래밍
-http://www.yes24.com/24/goods/57836991?scode=032&OzSrank=6
+[2] 
+http://javacan.tistory.com/entry/kotlin-11-12-ko-reference
 
 
 ### 기타
