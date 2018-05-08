@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/activity_main_step_2"
-        android:text="Step 1 (발표자/내용)"/>
+        android:text="Step 1 (김태훈/샘플)"/>
 
     <Button
         android:id="@+id/activity_main_step_2"
