@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".basic.Step4Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,7 +20,7 @@
         <activity android:name=".basic.Step1Activity" android:label="Step1" />
         <activity android:name=".basic.Step2Activity" android:label="Step2" />
         <activity android:name=".basic.Step3Activity" android:label="Step3" />
-        <activity android:name=".basic.Step4Activity" android:label="Step4" />
+        <!--<activity android:name=".basic.Step4Activity" android:label="Step4" />-->
         <activity android:name=".basic.Step5Activity" android:label="Step5" />
         <activity android:name=".basic.Step6Activity" android:label="Step6" />
     </application>

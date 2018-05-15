@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/activity_main_step_3"
-        android:text="Step 4 (발표자/내용)"/>
+        android:text="Step 4 (김태훈/컬랙션,스트림,범위지정함수)"/>
 
     <Button
         android:id="@+id/activity_main_step_5"
