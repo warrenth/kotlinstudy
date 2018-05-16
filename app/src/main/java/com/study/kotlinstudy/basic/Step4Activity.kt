@@ -3,7 +3,6 @@ package com.study.kotlinstudy.basic
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.study.kotlinstudy.R
-import java.util.stream.Stream
 
 /**
  * Created by warrenth on 2018-04-26.
@@ -279,9 +278,87 @@ class Step4Activity : AppCompatActivity() {
          * 5. 범위지정함수
          */
         println("1) let")
-        println("2) appy")
-        println("3) with")
-        println("4) run")
+        //let()은 함수를 호출하는 객체를 이어지는 블록의 인자로 넘기고, 블록의 결과값을 반환합니다.
+       /**
+       기존
+        val padding = TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP, 16f, resources.displayMetrics).toInt()
+        // 왼쪽, 오른쪽 padding 설정
+        setPadding(padding, 0, padding, 0)
+        */
+       /**
+       let 사용.
+        TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 16f,
+                resources.displayMetrics).toInt().let {
+            // padding 대신 it 사용
+            setPadding(it, 0, it, 0)
+        }
+        */
+
+        println("2) apply")
+        //apply()는 함수를 호출하는 객체를 이어지는 블록의 리시버 로 전달하고, 객체 자체를 반환합니다.
+        //리시버란, 바로 이어지는 블록 내에서 메서드 및 속성에 바로 접근할 수 있도록 할 객체를 의미합니다. (접근 제어자에 따라 접근 가능한 범위에 한함)
+
+        /**
+         기존
+         val param = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT)
+         param.gravity = Gravity.CENTER_HORIZONTAL
+         param.weight = 1f
+         param.topMargin = 100
+         param.bottomMargin = 100
+         */
+        /**
+        apply 사용
+        val param = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT).apply {
+        gravity = Gravity.CENTER_HORIZONTAL
+        weight = 1f
+        topMargin = 100
+        bottomMargin = 100
+        }
+         */
+
+
+        println("3) run")
+        //run() 함수는 인자가 없는 익명 함수처럼 동작하는 형태와 객체에서 호출하는 형태 총 두 가지가 있습니다.
+        //객체 없이 run() 함수를 사용하면 인자 없는 익명 함수처럼 사용할 수 있습니다.
+
+        // apply() 와 run() 의 차이점
+        // apply()와 적용 예가 유사하지만, apply()는 새로운 객체를 생성함과 동시에 연속된 작업이 필요할 때
+        // 사용하고 run()은 이미 생성된 객체에 연속된 작업이 필요할 때 사용한다는 점이 조금 다릅니다.
+        /**
+        override fun onCreate(savedInstanceState: Bundle?) {
+        ...
+            supportActionBar?.run {
+            setDisplayHomeAsUpEnabled(true)
+            setHomeAsUpIndicator(R.drawable.ic_clear_white)
+            }
+        ...
+        }
+        run {
+            if (firstTimeView) introView else normalView
+        }.show()
+
+        webview.settings?.run {
+
+            javaScriptEnabled = true
+            databaseEnabled = true
+
+        }
+         */
+
+        println("4) with")
+        //with() 함수는 인자로 받는 객체를 이어지는 블록의 리시버로 전달하며, 블록의 결과값을 반환합니다.
+        //with() 함수는 사실상 run()함수와 기능이 거의 동일하며, 리시버로 전달할 객체가 어디에 위치하는지만 다릅니다.
+        //run() 함수는 with() 함수를 좀 더 편리하게 사용하기 위해 let()함수와 with()함수를 합쳐놓은 형태라 보아도 무방합니다.
+        /**
+         * supportActionBar?.let {
+            with(it) {
+            setDisplayHomeAsUpEnabled(true)
+            setHomeAsUpIndicator(R.drawable.ic_clear_white)
+            }
+        }
+         */
+
     }
 
     class Book(val title: String, val authors: List<String>)
